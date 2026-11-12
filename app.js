@@ -104,7 +104,7 @@
   }
 
   function addThousandsSeparators(intPart) {
-        return intPart.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+return intPart.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
   // Format a typed entry string exactly as typed (keeps trailing "." / zeros).
@@ -113,7 +113,7 @@
     if (s[0] === '-') { neg = true; s = s.slice(1); }
     const [i, f] = s.split('.');
     let out = addThousandsSeparators(i || '0');
-    if (f !== undefined) out += ',' + f;
+   if (f !== undefined) out += '.' + f;
     return (neg ? '-' : '') + out;
   }
 
@@ -125,7 +125,7 @@
     if (abs !== 0 && (abs >= 1e9 || abs < 1e-8)) {
       let [m, e] = n.toExponential(8).split('e');
       m = m.replace(/\.?0+$/, '');
-      return m.replace('.', ',') + 'e' + (e[0] === '+' ? e.slice(1) : e);
+     return m + 'e' + (e[0] === '+' ? e.slice(1) : e);
     }
     let s = String(round9(n));
     if (s.includes('e')) s = n.toFixed(9).replace(/\.?0+$/, '');
@@ -133,7 +133,7 @@
     if (s[0] === '-') { neg = true; s = s.slice(1); }
     const [i, f] = s.split('.');
     let out = addThousandsSeparators(i);
-    if (f) out += ',' + f;
+   if (f) out += '.' + f;
     return (neg ? '-' : '') + out;
   }
 
