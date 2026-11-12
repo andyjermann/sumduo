@@ -1,6 +1,6 @@
 {
-  "name": "Calculadora",
-  "short_name": "Calculadora",
+  "name": "Calculator",
+  "short_name": "Calculator",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
