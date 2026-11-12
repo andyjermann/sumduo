@@ -7,7 +7,7 @@
   "orientation": "portrait",
   "background_color": "#000000",
   "theme_color": "#000000",
-  "lang": "pt-BR",
+  "lang": "en-US",
   "icons": [
     {
       "src": "./calc-icon.png",
